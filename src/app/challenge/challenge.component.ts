@@ -22,12 +22,9 @@ export class ChallengeComponent implements OnInit {
 
   ngOnInit() {
 
-
   }
 
   onSubmit() {
 
-
   }
-
 }
