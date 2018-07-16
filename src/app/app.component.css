@@ -1,0 +1,18 @@
+.menu {
+    display: flex;
+    /* justify-content: center; */
+    background-color: rgb(242, 242, 242);
+}
+.menu a {
+    padding: 10px;
+    background-color: rgb(247, 247, 247);
+    color: rgb(125, 0, 214);
+    border: solid 1px rgb(125, 0, 214);
+    margin: 15px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+.menu a.active-link {
+    background-color: rgb(125, 0, 214);
+    color: rgb(247, 247, 247);
+}
