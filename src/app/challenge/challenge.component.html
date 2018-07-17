@@ -1,6 +1,5 @@
 
 <div style="text-align:center" class="container">
-
   <form class="form">
     <div class="input">
       <label for="startNumber">Start Number</label>
@@ -11,22 +10,23 @@
       <label for="endNumber">End Number</label>
       <input type="text" name="endNumber" [(ngModel)]="maxNum">
     </div>
-
   </form>
 
   <ul class="month">
-
     <li class="cell head" *ngFor="let day of days">
-        {{day}}
-    </li>
-
-    <li class="cell" *ngFor="let date of dates; let i = index " [ngClass]="{
-      'start': i >= minNum -1 && i <= maxNum -1,
-      'between': i == minNum -1,
-      'end': i == maxNum -1
-    }">
       <div>
-        {{date}}
+        <div>{{day}}</div>
+      </div>
+    </li>
+    <li class="cell" *ngFor="let date of dates; let i = index"
+    [ngClass]="{
+      'start': i == minNum -1,
+      'between': i >= minNum -1 && i <= maxNum -1,
+      'end': i == maxNum -1
+    }"
+    >
+      <div>
+        <div>{{date}}</div>
       </div>
     </li>
   </ul>

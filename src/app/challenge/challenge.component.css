@@ -1,7 +1,3 @@
-*{
-box-sizing: border-box;
-
-}
 
 .container{
   display: block;
@@ -39,23 +35,21 @@ box-sizing: border-box;
 .month{
   display: flex;
   flex-wrap: wrap;
-  width: 40%;
+  width: 80%;
   margin: 0 auto;
   padding: 0;
 }
-
-.cell{
+.cell{ 
   position: relative;
   display: flex;
   flex: 1 1 13%;
   list-style-type: none;
   align-items: center;
   justify-content: center;
-  font-size: 35px
 }
-.cell.head{
+.cell.head{ 
+  color: rgb(125, 0, 214);
   font-weight: bolder;
-  color :rgb(255, 0, 255)
 }
 /* FORZA LA ALTURA IGUAL AL ANCHO PARA QUE SEA UN CUADRADO PERFECTO */
 .cell:after {
@@ -64,71 +58,28 @@ box-sizing: border-box;
   padding-bottom: 100%;
 }
 
-.start {
-  background: rgb(255, 0, 255);
-  color: white;
-  margin: 10px 0;
-}
-
-.between{
-  border-radius: 5rem 0 0 5rem;
-  padding: 5px 15px;
-}
-
-.end {
-  border-radius: 0 5rem 5rem 0;
-  padding: 5px 15px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* DEL 0 al 7 BORDE SUPERIOR */
-.cell:nth-child(-n+7) {
-
-}
-
-/* CADA 7 BODRE IZQUIERDO EN PRIMERO */
-.cell:nth-child(7n+1) {
-
-
-}
-
-/* .cell:nth-child(n+9):nth-child(-n+26) > div::after{
+.between > div::after{
   content: '';
   flex: 1 1 auto;
-  height: 100%; */
-  /* background-color: #2bb5ff; */
-  /* position: absolute;
+  height: 100%;
+  background-color:rgb(125, 0, 214);
+  position: absolute;
   width: 100%;
   z-index: -1;
-} */
+}
 
-/*RANGO DE FECHAS*/
-/* .cell:nth-child(n+9):nth-child(-n+26) > div{
-
+/* RANGO DE FECHAS */
+.between > div{
   position: relative;
   display:flex;
+  color: white;
   flex: 1 1 auto;
   align-items: center;
   justify-content: center;
   height: 50%;
-   border: 3px solid rgb(105, 74, 16);
+}
 
-} */
-
-/* .cell:nth-child(n+9):nth-child(-n+26) > div > div{
+.between > div > div{
   position: relative;
   display: flex;
   flex: 0 0 50%;
@@ -136,42 +87,39 @@ box-sizing: border-box;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-} */
-/*FORCE SQUARE*/
-
-/* .cell:nth-child(n+9):nth-child(-n+26) > div > div:after {
+}
+/* FORCE SQUARE */
+.between > div > div:after {
   content: "";
   display: block;
   padding-bottom: 100%;
 }
-.month .cell:nth-child(9) > div > div,
-.month .cell:nth-child(26) > div > div{
+.month .start > div > div,
+.month .end > div > div{
   border: 3px solid white;
-  background-color: #b12bff72;
+  background-color: rgb(125, 0, 214);
   color: white;
-} */
+}
 
-/* .month .cell:nth-child(9) > div::after{
+.month .start > div::after{
   position: absolute;
   content: '';
   height: 100%;
-  background-color: #2bb5ff;
+  background-color: rgb(125, 0, 214);
   width: 50%;
   margin-left: 25%;
   z-index: -1;
-  border: 3px solid blue;
   box-sizing: border-box;
-} */
+}
 
-/* .month .cell:nth-child(26) > div::after{
+.month .end > div::after{
   position: absolute;
   content: '';
   height: 100%;
-  background-color: #2bb5ff;
+  background-color: rgb(125, 0, 214);
   width: 50%;
   margin-left: -25%;
   z-index: -1;
-  border: 3px solid rgb(255, 0, 170);
   box-sizing: border-box;
-} */
+}
 
